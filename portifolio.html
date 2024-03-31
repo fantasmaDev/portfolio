@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anderson.dev - Portfolio </title>
+
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+        <style>
+
+            section > h2 {
+                margin-block: 20px;
+                padding-left: 5px;
+                font-size: 1.15em;
+                background-image: linear-gradient(to right, #518071, #C8FCEA);
+            }
+
+            section > dl dt {
+                color: #C8FCEA;
+                font-weight: bold;
+            }
+
+            section > dl dd {
+                padding-left: 10px;
+                margin-bottom: 15px;
+                font-size: 0.8em;
+            }
+
+            section > dl h3 {
+                text-align: center;
+            }
+
+            section > dl video {
+                width: 70%;
+                display: block;
+                margin: 0px auto;
+                margin-bottom: 20px;
+
+                border-width: 2px 1px 6px 4px;
+                border-style: solid;
+                border-color: #518071;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div id="img_titulo"></div>
+            <h1>anderson<span id="destaque_titulo">&lt;dev&gt;</span></h1>
+
+        </header> 
+
+        <nav>
+            <ul>
+                <li><a href="index.html">QUEM SOU EU</a></li>
+                <li><a href="info_acad.html">FORMAÇÃO EDUCACIONAL</a></li>
+                <li><a href="#">PORTFÓLIO</a></li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <!-- A formatação de alguns elementos apresentados abaixo foi realizada INTERNAMENTE no bloco <style> da seção <head> -->
+        <section>
+
+            <h1>Portfólio</h1>
+
+            <h2>Aplicações Web</h2>
+            <p>
+                Até o presente momento, não possuo nenhuma publicação de site além desse, no qual você está navegando correntemente... 
+            </p>
+
+            <h2>Projetos Python</h2>
+            <p>
+                Apresentarei aqui, dois projetos simples desenvolvidos por mim em linguagem Python: <br><br>
+
+                <b>[NOTA]: O projetos apresentados estão assinados pelo apelido/nickname/alias de 'Fantasma_'</b>
+            </p>
+
+            <dl>
+
+                <dt>Cronômetro Simples</dt>
+                <dd>
+                    Programa básico, sem interface gráfica (roda em terminal), cujo objetivo é registrar o tempo decorrido para realização de uma determinada atividade, de acordo com controle do usuário. Todos os intervalos cronometrados em um mesmo dia são salvos em um arquivo .JSON, de modo que é possível acessar o tempo total marcado naquela data específica. <br><br>
+
+                    O projeto foi implementado utilizando conceitos de orientação a objetos para definir as classes de 'tempo' e utilização de bibliotecas específicas do Python, como 'json' e 'datetime'.
+                </dd>
+
+                <h3>Video de demonstração</h3>
+
+                <video controls width="600">
+                    <source src="video/demo_cronometro.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+                <dt>Conversor de Formatos</dt>
+                <dd>
+                    Assim como o cronômetro, o programa em questão não possui interface gráfica. Foi criado com o objeto principal de converter extensões de diversos arquivos de uma única vez, sem necessiade de renomá-los manualmente. É possível assim, por exemplo, converter várias imagens de formato '.webp' para '.jpg'. <br><br>
+
+                    O projeto foi implementado utilizando diversas funções para manipulação de arquivos presentes nas blibliotecas 'os' e 'system' do Python.
+                </dd>
+
+                <h3>Video de demonstração</h3>
+
+                <video controls width="600">
+                    <source src="video/demo_conversor.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+
+            </dl>
+
+        </section>
+        
+    </body>
+</html>

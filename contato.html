@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anderson.dev - Contato </title>
+
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/form.css">
+        <!-- Decidi criar um novo arquivo para formatação de estilos, especialmente para contemplar as formatações de formulário -->
+
+        <style>
+
+            #txt_tel, #txt_email {
+                color: #C8FCEA;
+                font-weight: bold;
+            }
+
+            #bloco_cont_direto {
+                margin-top: 20px;
+            }
+
+            #bloco_cont_direto > h2 {
+                text-align: center;
+                font-size: 0.85em;
+            }
+
+            #bloco_cont_direto .tipo_contato {
+                color: #C8FCEA;
+                display: inline-block;
+                width: 100px;
+                font-weight: bold;
+
+                /* border: 1px solid red; */
+            }
+
+            #bloco_cont_direto .tipo_info {
+                display: inline-block;
+                width: 300px;
+            }
+
+            #alternativa {
+                text-align: center;
+                font-size: 1em;
+                font-weight: bold;
+                margin-block: 25px;
+                padding-inline: 20px;
+
+                position: relative;
+            }
+
+            #alternativa::before,
+            #alternativa::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: calc(50% - 20px);
+                border-top: 1px solid white;
+            }
+
+            #alternativa::before {
+                left: 0;
+            }
+
+            #alternativa::after {
+                right: 0;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div id="img_titulo"></div>
+            <h1>anderson<span id="destaque_titulo">&lt;dev&gt;</span></h1>
+
+        </header> 
+
+        <nav>
+            <ul>
+                <li><a href="index.html">QUEM SOU EU</a></li>
+                <li><a href="info_acad.html">FORMAÇÃO EDUCACIONAL</a></li>
+                <li><a href="portifolio.html">PORTFÓLIO</a></li>
+                <li><a href="#">CONTATO</a></li>
+            </ul>
+        </nav>
+
+        <section>
+
+            <h1>Contato</h1>
+
+            <!-- A formatação de alguns elementos apresentados abaixo foi realizada INTERNAMENTE no bloco <style> da seção <head> -->
+            <div id="bloco_cont_direto">
+
+                <h2>Entre em contado direto comigo através das opções...</h2>
+
+                <p id="cont_telefone">
+                    <span class="tipo_contato">TELEFONE</span>: <span class="tipo_info">(83) 9 3333-111 [WhatsApp]</span> <span id="txt_tel"></span>
+                </p>
+
+                <p id="cont_email">
+                    <span class="tipo_contato">EMAIL</span>: <span class="tipo_info">andersondev@email.com</span> <span id="txt_email"></span>
+                </p>
+
+                <p id="alternativa">OU</p>
+
+                <h2>Envie uma mensagem direta através do formulário</h2>
+
+            </div>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Mensagem</legend>
+
+                    <div id="colecao_inputs">
+
+                        <label for="campo_nome">NOME</label>: <input type="text" name="campo_nome" id="campo_nome">
+
+                        <br><br>
+
+                        <label for="campo_email">EMAIL</label>: <input type="email" name="campo_email" id="campo_email">
+
+                        <br><br>
+                        
+                        <label>IDENT. GERAL</label>: <input type="radio" name="ident_geral" id="p_fisica" value="p_fisica"> Pessoa Física <input type="radio" name="ident_geral" id="p_juridica" value="p_juridica"> Pessoa Jurídica
+
+                        <br><br>
+
+                        <label for="campo_msg">TEXTO</label>: <textarea id="campo_msg"></textarea>
+
+                    </div>
+                    
+                    <button>ENVIAR</button>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+        <!-- Relacionando a página atual ao scrip 'msg_contato' -->
+        <!-- Basicamente, o que o script faz é exibir uma mensagem informando que os dados de telefone e email informados na seção de contato direto são fictícios -->
+        <script src="js/msg_contato.js"></script>
+        
+    </body>
+</html>

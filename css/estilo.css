@@ -1,0 +1,148 @@
+/* ===================== Formatação geral + seletor universal (*) ===================== */
+
+/* Formatação geral para a página utilizando o seletor universal */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    background-color: #323232;
+}
+
+/* Alterando a forma como o usuário enxerga a ação de seleção na página */
+::selection {
+    background-color: #518071;
+}
+
+/* ===================== Formatação de elementos estruturais semânticos ===================== */
+
+/* Formatação de cabeçalho */
+header {
+    color: white;
+    padding: 30px;
+    margin: 10px;
+
+    /* border: 1px solid red; */
+}
+
+/* Formatação do menu vertical */
+nav {
+    text-align: center;
+
+    /* border: 1px solid red; */
+}
+
+/* Abaixo, seguem algumas configurações que permitem a transformação da lista não ordenada em um menu */
+nav > ul {
+    list-style-type: none;
+    background-color: #C8FCEA;
+    /* min-height: 100vh; */
+}
+
+nav > ul li {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.85em;
+    margin-inline: -8px;
+
+    /* border: 1px solid red; */
+}
+
+nav > ul li a {
+    display: block;
+    padding: 5px 25px;  /* O primeiro valor corresponde a 'padding-block' e o segundo 'padding-inline' */
+
+    text-decoration: none;
+    color: #518071;
+    font-weight: bold;
+
+    /* Efeito de Transição para o evento 'hover' (De BAIXO para CIMA) */
+    background-image: linear-gradient(to top, transparent 0%, transparent 50%, #C8FCEA 50%, #C8FCEA 100%);
+    background-size: 100% 200%; /* Alterando o tamanho verticalmente */
+    background-position: 100% 0%; /* Iniciando do topo */
+    transition: background-position linear 0.35s, background-color linear 0.5s, color linear 0.5s;
+
+    /* border: 1px solid red; */
+}
+
+nav > ul li a:hover {
+    background-position: 0% 100%; /* Finalizando no fundo */
+    background-color: #00C896;
+    color: white;
+}
+
+/* Formatações referente a área de conteúdo */
+section {
+    margin: 25px auto;
+    width: 90%;
+    color: white;
+
+    /* border: 1px solid red; */
+}
+
+section h1 {
+    text-align: center;
+    color: #C8FCEA;
+    border-bottom: 1px solid #518071;
+    margin-bottom: 5px;
+}
+
+section img {
+    width: 25%;
+    height: 350px;
+
+    border-width: 2px 1px 6px 4px;
+    border-style: solid;
+    border-color: #518071;
+
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 0.80em;
+    text-align: justify;
+    margin-block: 20px;
+}
+
+section p a {
+    color: #C8FCEA;
+}
+
+section p a:hover {
+    background-color:  #518071;
+    color: white;
+}
+
+/* ===================== Formatação de ID's ===================== */
+
+
+header #img_titulo {
+    background-image: url(../img/binary_code.jpg);
+    background-repeat: repeat;
+    background-size: 100%;
+    background-position: center;
+
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    width: 50%;
+    height: 15vh;
+    z-index: -1;
+
+    /* border: 1px solid red; */
+}
+
+header h1 {
+    text-align: center;
+}
+
+header #destaque_titulo {
+    color: #C8FCEA;
+    font-weight: bold;
+}
